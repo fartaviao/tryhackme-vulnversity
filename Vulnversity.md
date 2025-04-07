@@ -354,7 +354,7 @@ Ctrl + x and then y to save the file.
 ```
 nc -lvnp 1234
 ```
-![Run netcat](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-25.png
+![Run netcat](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-25.png)
 
 5. Now with netcat listening the 1234 port we can load the .phtml file with the reverse shell.
 
