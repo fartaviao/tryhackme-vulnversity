@@ -30,7 +30,7 @@ This repository contains a detailed walkthrough for the **[Vulnversity](https://
 ```
 tryhackme-vulnversity/
 ├── README.md                      # Introduction and overview
-├── vulnversity.md                 # Main documentation (full guide)
+├── Vulnversity.md                 # Main documentation (full guide)
 ├── Scripts/
 │   └── reverse-shell.phtml        # Reverse shell script
 └── Screenshots/                   # Visual references
