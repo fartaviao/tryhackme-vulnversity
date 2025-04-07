@@ -240,7 +240,7 @@ or turn off proxy settings as needed.
 
 - We go into the FoxyProxy options and add a new proxy and click Save.
 
-Title: Burp
+Title: burpsuite
 
 Type: HTTP
 
