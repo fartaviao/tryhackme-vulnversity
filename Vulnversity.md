@@ -72,7 +72,7 @@ tryhackme-vulnversity/
 ```bash
    nmap -sV <MACHINE_TARGET_IP>
 ```
-![Scan for open ports and services](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-01.PNG)
+![Scan for open ports and services](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-01.png)
 
 2. **Identified open ports:**
    - **21/tcp** - FTP (vsftpd 3.0.3)
@@ -107,7 +107,7 @@ tryhackme-vulnversity/
 **6. What port is the web server running on?**
 - 3333 ✅ Correct Answer
 
-![Web server site](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-02.PNG)
+![Web server site](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-02.png)
 
 **7. It's essential to ensure you are always doing your reconnaissance thoroughly before progressing. Knowing all open services (which can all be points of exploitation) is very important. Don't forget that ports in a higher range might be open, so constantly scan ports after 1000 (even if you leave checking in the background).**
 - No answer needed ✅ Correct Answer
@@ -179,11 +179,11 @@ This tool is particularly useful for penetration testing and security assessment
 2. **What is the directory that has an upload form page?:**
 - `/internal/` ✅ Correct Answer
 
-![Gobuster search](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-03.PNG)
+![Gobuster search](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-03.png)
 
 - You can enter the directories pulse Ctrl + clic
 
-![Web server site upload form](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-04.PNG)
+![Web server site upload form](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-04.png)
 
 - We can check that this directory has an upload form
 
@@ -224,7 +224,7 @@ cat phplist.txt
 ```
 Ctrl + x and then y to save the file.
 
-![Make a wordlist](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-05.PNG)
+![Make a wordlist](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-05.png)
 
 To get started, we’ll begin by installing FoxyProxy in the Firefox browser.
 FoxyProxy is a browser extension for Firefox and Chrome that makes it simple to manage and switch between different proxy settings.
@@ -235,8 +235,8 @@ FoxyProxy makes handling proxies easier by offering a user-friendly interface wi
 or turn off proxy settings as needed.
 
 - Search "foxyproxy extension" and add it
-![Add foxyproxy extension](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-06.PNG)
-![Add foxyproxy extension](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-07.PNG)
+![Add foxyproxy extension](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-06.png)
+![Add foxyproxy extension](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-07.png)
 
 - We go into the FoxyProxy options and add a new proxy and click Save.
 
@@ -248,8 +248,8 @@ Hostname: 127.0.0.1
 
 Port: 8080
 
-![Foxyproxy Options](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-08.PNG)
-![Add a new proxy and click Save](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-09.PNG)
+![Foxyproxy Options](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-08.png)
+![Add a new proxy and click Save](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-09.png)
 
 - Now we run Burpsuite from the terminal. (It is preinstalled in Kali or Parrot OS)
 
@@ -258,25 +258,25 @@ burpsuite
 ```
 - Burpsuite will open, we can create a temporary project, use the default parameters, and launch it by clicking Start Burp.
 
-![Create a temporary project](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-10.PNG)
+![Create a temporary project](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-10.png)
 
 - Go to the Proxy tab, Intercept, and put the option in "Intercept is ON".
 
-![Intercept is ON](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-11.PNG)
+![Intercept is ON](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-11.png)
 
 - At this point, BurpSuite is intercepting. We can go back to Firefox and select the burpsuite Proxy we previously configured.
 
-![Select the burpsuite Proxy](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-12.PNG)
+![Select the burpsuite Proxy](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-12.png)
 
 - Now we can upload the file we’ve created. Click on Submit, and we notice that the page keeps loading because the proxy has intercepted the request.
 So, we go to BurpSuite to see what has been intercepted.
 
-![Upload the file we’ve created](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-13.PNG)
+![Upload the file we’ve created](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-13.png)
 
 - We obtain the HTML request information in text format. Additionally, we can see the file we’re trying to upload to the target machine,
 with the plain text content showing the different extensions included in our file `phplist.txt`
 
-![HTML request information](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-14.PNG)
+![HTML request information](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-14.png)
 (The target IP changed because in my case for this write-up the machine timed out, but it doesn't matter just keep it in mind)
 
 - Next step is select and highlight the `phplist.txt`, right-clic and tab in Send to Intruder, then go to the Intruder tab.
@@ -288,33 +288,33 @@ tested payload.
 - In our case, we are going to carry out an attack by testing different file extensions, to determine which one is accepted and upload the file with the correct extension.
 - For this we have to pulse on `clear§`
 
-![Send to Intruder and clear§](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-15.PNG)
+![Send to Intruder and clear§](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-15.png)
 
 - Next, we select and highlight the `.txt` extension, so when we carry out the attack, that extension is replaced by the ones we add to the payload.
 - To do this, we select and highlight the extension and click `Add§`. It should look like this:
 
-![Extension replaced](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-16.PNG)
+![Extension replaced](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-16.png)
 
 - We go to the Payloads tab which is displayed and load the file we created with the extensions: `phpext.txt`.
 - We disable payload encoding. Payload encoding in BurpSuite is a feature that allows you to automatically encode payloads before sending them in an Intruder Sniper attack. This can be useful when you need to bypass input restrictions, such as character filters or security mechanisms that attempt to detect and block certain data patterns. In our case, we disable it.
 
-![Load the payload](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-17.PNG)
+![Load the payload](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-17.png)
 
 - Click on `Start attack`.
 
-![Start the attack](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-18.PNG)
+![Start the attack](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-18.png)
 
 - We get the attack result, the payload has tested each of the extensions, and each one gets a response.
 
-![Attack result](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-19.PNG)
+![Attack result](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-19.png)
 
 - To check the response, we click on one of the extensions, go to the Response tab, and look at line 34, where we can see whether the extension is allowed or not.
 
-![Check the response](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-20.PNG)
+![Check the response](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-20.png)
 
 - We must check each of the extensions until we find which is allowed.
 
-![Check each of the extensions](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-21.PNG)
+![Check each of the extensions](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-21.png)
 
 - We’ve found an allowed extension: `.phtml`. PHTML, which means for "PHP Hypertext Preprocessor HTML", is a file extension mainly used in web applications for pages containing embedded PHP code. It is essentially an HTML file with PHP code fragments inside. When a web server receives a request for a file with the .phtml extension, it interprets and executes the PHP code before sending the resulting page to the client.
 - Therefore, this is the file extension that we can upload to the target system to create our reverse shell.
@@ -324,7 +324,7 @@ tested payload.
 - We are going to use a reverse shell written in PHP as our payload. A reverse shell works by making a connection from the victim machine to the attacker's machine, forcing the target to initiate a connection with you. So, you’ll be listening for incoming connections, receiving, uploading, and executing your shell, which will send you a signal so you can control it.
 - Download the following PHP reverse shell from [here](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)
 
-![Download the PHP reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-22.PNG)
+![Download the PHP reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-22.png)
 
 - To gain remote access to this machine, follow these steps:
 
@@ -344,21 +344,21 @@ nano php-reverse-shell.phtml
 ```
 Ctrl + x and then y to save the file.
 
-![Edit the php-reverse-shell.phtml file](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-23.PNG)
+![Edit the php-reverse-shell.phtml file](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-23.png)
 
 - We also check the port (in this case, it’s set to 1234, you can change it). This is important when running Netcat, as we’ll specify the port our system is listening on.
 
-![Edit the php-reverse-shell.phtml file](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-24.PNG)
+![Edit the php-reverse-shell.phtml file](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-24.png)
 
 4. Now we can run netcat indicating the port on which we will be listening:
 ```
 nc -lvnp 1234
 ```
-![Run netcat](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-25.PNG)
+![Run netcat](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-25.png
 
 5. Now with netcat listening the 1234 port we can load the .phtml file with the reverse shell.
 
-![Load the .phtml file with the reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-26.PNG)
+![Load the .phtml file with the reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-26.png)
 
 - With confirmation that the file has been successfully uploaded to the server, the following question arises: Where is the file we just uploaded with the .phtml extension? We need to search in the server for that file. To do this, we use `Gobuster` as we did before, but this time we perform the scan targeting the `/internal/` directory directly:
 ```
@@ -366,7 +366,7 @@ gobuster dir -u http://10.10.41.197:3333/internal -w /usr/share/wordlists/dirbus
 ```
 - We found a /uploads directory. We can access it with Ctrl+click to see the file we just uploaded.
 
-![Search and execute the reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-27.PNG)
+![Search and execute the reverse shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-27.png)
 
 - Now we just need to run it by clicking on it. If everything works correctly, the window will appear to be loading, and if we return to the terminal where we had Netcat listening we'll see that the reverse shell has worked correctly. Now let’s start a new instance of the shell using the following command:
 ```
@@ -375,7 +375,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 - `python -c`: This runs the Python interpreter in command execution mode.
 - `'import pty; pty.spawn("/bin/bash")'`: This is the Python script being executed. It imports the pty module (which provides functions to handle pseudo-terminals) and then calls the spawn() function from the module, passing "/bin/bash" as the argument. This starts a new process tied to a pseudo-terminal, effectively giving us an interactive /bin/bash shell.
 
-![Start a new instance of the shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-28.PNG)
+![Start a new instance of the shell](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-28.png)
 
 **Now come back to the questions for the Task 4: 2. I understand the Burpsuite tool and its purpose during pentesting.**
 - No answer needed ✅ Correct Answer
@@ -393,7 +393,7 @@ cat /etc/passwd
 ```
 - It will display the list of all user accounts. If we look at the last line, we see a user named `bill` with the `/home` directory:
 
-![User who manages the webserver](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-29.PNG)
+![User who manages the webserver](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-29.png)
 
 - bill ✅ Correct Answer
 
@@ -405,7 +405,7 @@ ls
 cat user.txt
 ```
 
-![User flag](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-30.PNG)
+![User flag](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-30.png)
 
 - 8bd7992fbe8a6ad22a63361004cfcedb ✅ Correct Answer
 
@@ -420,7 +420,7 @@ For example, the binary file to change your password has the SUID bit set on it 
 
 The image below demonstrates how the SUID (Set User ID) bit modifies file permissions in Linux:
 
-![Bin SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-31.PNG)
+![Bin SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-31.png)
 
 - What is SUID?
 
@@ -477,7 +477,7 @@ This command lists all files with the SUID bit enabled on the system.
 
 - /bin/systemctl ✅ Correct Answer
 
-![/bin/systemctl](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-32.PNG)
+![/bin/systemctl](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-32.png)
 
 - Why is `systemctl` with SUID is important and so Dangerous?
 
@@ -530,11 +530,11 @@ The `s` in `rws` means it has **SUID**, which is dangerous.
 
 Taking advantage of the fact that the systemctl binary has the SUID bit enabled, let’s take a look at [GTFOBins](https://gtfobins.github.io/) and search for systemctl.
 
-![GTFOBins systemctl SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-33.PNG)
+![GTFOBins systemctl SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-33.png)
 
 - We can search for `systemctl`, access SUID and copy the code that we are going to use to escalate privileges.
 
-![GTFOBins systemctl SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-34.PNG)
+![GTFOBins systemctl SUID](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-34.png)
 
 - Open a new terminal, paste the code into a text editor and make the following changes:
 ```
@@ -543,7 +543,7 @@ nano systemctlsuid.txt
 
 - It should look like this:
 
-![Make the following changes](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-35.PNG)
+![Make the following changes](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-35.png)
 
 ```bash
 TF=$(mktemp).service
@@ -584,7 +584,7 @@ ls
 cat output
 ```
 
-![Root flag](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-36.PNG)
+![Root flag](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-36.png)
 
 2. **What is the root flag value?**
 
@@ -592,7 +592,7 @@ cat output
 
 **Congratulations, you have completed the Room!!!**
 
-![Congratulations](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-37.PNG)
+![Congratulations](https://raw.githubusercontent.com/fartaviao/tryhackme-vulnversity/refs/heads/main/Screenshots/Screenshot-37.png)
 
 ---
 ## Conclusion and Additional Resources
